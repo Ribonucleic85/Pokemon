@@ -10,8 +10,8 @@ the info here will be for the main series of games: Red, Blue, Green, Yellow, ..
 
 compile lists / tables of:
 - Stats
+ - IV Calculation
 - Moves
 - Evolutions and Mega Evolutions
 - Ultra Beasts
-
--- this is all i can come up with for now
+- ...
