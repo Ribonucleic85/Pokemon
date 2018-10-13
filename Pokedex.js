@@ -21,9 +21,7 @@ Pokemon = {
       if (n>649 && n<722) return Pokemon.Dex.Gen6[n-650];  //  Gen 6 650-721      range of the
       if (n>721 && n<808) return Pokemon.Dex.Gen7[n-722];  /*  Gen 7 722-807      relevant gen
       if (n>807 && n<???) return Pokemon.Dex.Gen8[n-802];  << redundant Gen 8 code
-            ^ Gen 7 currently official ends at 807 but it may stretch to 808 or 809 */
-
-    
+            ^ Gen 7 currently officially ends at 807 but it may stretch to 808 or 809 */
     },
 
 
