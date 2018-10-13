@@ -7,6 +7,10 @@ Pokemon = {
     /* ------------------------------------------- */
 
     No: function(n) {
+      if (n==808||n==891) return Pokemon.Dex.Gen7or8[0];   //  Check for Meltan' suspected Dex Numbers
+      
+      // if not a Meltan lookup then do standard bounds checks
+      // and if in bounds continue to lookup the relevant Pokemon
       if (n<0 || n>802) return false;  // exit with false if out of range 1-802
 
       if (n>0 && n<152)   return Pokemon.Dex.Gen1[n-1];    //  Gen 1 001-151     subtracting the
@@ -15,8 +19,11 @@ Pokemon = {
       if (n>386 && n<494) return Pokemon.Dex.Gen4[n-387];  //  Gen 4 387-493    0+ which puts it
       if (n>493 && n<650) return Pokemon.Dex.Gen5[n-494];  //  Gen 5 494-649    within the index
       if (n>649 && n<722) return Pokemon.Dex.Gen6[n-650];  //  Gen 6 650-721      range of the
-      if (n>721 && n<803) return Pokemon.Dex.Gen7[n-722];  /*  Gen 7 722-802      relevant gen
-      if (n>802 && n<???) return Pokemon.Dex.Gen8[n-802]; << redundant gen 8 code */
+      if (n>721 && n<808) return Pokemon.Dex.Gen7[n-722];  /*  Gen 7 722-807      relevant gen
+      if (n>807 && n<???) return Pokemon.Dex.Gen8[n-802];  << redundant Gen 8 code
+            ^ Gen 7 currently official ends at 807 but it may stretch to 808 or 809 */
+
+    
     },
 
 
@@ -172,8 +179,10 @@ Pokemon = {
       "Jangmo-o",     "Hakamo-o",   "Kommo-o",    "Tapu Koko",     "Tapu Lele",    "Tapu Bulu",
       "Tapu Fini",    "Cosmog",     "Cosmoem",    "Solgaleo",      "Lunala",       "Nihilego",
       "Buzzwole",     "Pheromosa",  "Xurkitree",  "Celesteela",    "Kartana",      "Guzzlord",
-      "Necrozma",     "Magearna",   "Marshadow"
-    ]
+      "Necrozma",     "Magearna",   "Marshadow",  "Poipole",       "Naganadel",    "Stakataka",
+      "Blacephalon",  "Zeraora"
+    ],
+    Gen7or8: ["Meltan"]
   }
 }
 
